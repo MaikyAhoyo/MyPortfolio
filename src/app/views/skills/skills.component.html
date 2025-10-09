@@ -1,0 +1,194 @@
+<section
+  id="skills"
+  class="snap-start min-h-screen py-24 px-6 md:px-20 bg-gray-900 flex flex-col justify-center items-center relative overflow-hidden"
+>
+  <div
+    class="absolute inset-0 opacity-5 bg-[linear-gradient(#ffffff_1px,transparent_1px),linear-gradient(90deg,#ffffff_1px,transparent_1px)] bg-[size:60px_60px]"
+  ></div>
+
+  <div class="container mx-auto relative z-10">
+    <h2
+      class="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-20 text-white"
+      data-animation="fade-in-up"
+    >
+      My
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"
+        >Skills</span
+      >
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div data-animation="fade-in-left">
+        <div
+          class="bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          ></div>
+
+          <div class="flex items-center mb-6 relative z-10">
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white">Frontend</h3>
+              <p class="text-cyan-400 text-sm">User Interface & Experience</p>
+            </div>
+          </div>
+          <div class="space-y-4 relative z-10">
+            <div
+              *ngFor="let skill of frontendSkills"
+              class="flex items-center justify-between group/skill"
+            >
+              <div class="flex items-center gap-3">
+                <span class="text-gray-300 font-medium">{{ skill.name }}</span>
+                <span
+                  class="text-blue-400 text-xs font-bold bg-blue-500/20 px-2 py-1 rounded-full"
+                >
+                  {{ skill.level }}%
+                </span>
+              </div>
+              <div
+                class="w-20 h-3 bg-gray-700 rounded-full overflow-hidden shadow-inner"
+              >
+                <div
+                  class="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full transition-all duration-1000 ease-out group-hover/skill:shadow-lg group-hover/skill:shadow-blue-500/25"
+                  [style.width.%]="skill.level"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-animation="fade-in-up" data-delay="200">
+        <div
+          class="bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          ></div>
+
+          <div class="flex items-center mb-6 relative z-10">
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white">Backend</h3>
+              <p class="text-emerald-400 text-sm">Server & Database</p>
+            </div>
+          </div>
+          <div class="space-y-4 relative z-10">
+            <div
+              *ngFor="let skill of backendSkills"
+              class="flex items-center justify-between group/skill"
+            >
+              <div class="flex items-center gap-3">
+                <span class="text-gray-300 font-medium">{{ skill.name }}</span>
+                <span
+                  class="text-cyan-400 text-xs font-bold bg-cyan-500/20 px-2 py-1 rounded-full"
+                >
+                  {{ skill.level }}%
+                </span>
+              </div>
+              <div
+                class="w-20 h-3 bg-gray-700 rounded-full overflow-hidden shadow-inner"
+              >
+                <div
+                  class="h-full bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-full transition-all duration-1000 ease-out group-hover/skill:shadow-lg group-hover/skill:shadow-cyan-500/25"
+                  [style.width.%]="skill.level"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-animation="fade-in-right" data-delay="400">
+        <div
+          class="bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-700 hover:border-emerald-500 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden h-full"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          ></div>
+
+          <div class="flex items-center mb-6 relative z-10">
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-amber-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white">Tools & Tech</h3>
+              <p class="text-amber-400 text-sm">Development Ecosystem</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3 relative z-10">
+            <span
+              *ngFor="let tool of tools"
+              class="px-4 py-3 bg-gray-900/80 text-gray-300 rounded-xl text-sm border border-gray-700 hover:border-emerald-500 hover:text-emerald-400 hover:bg-emerald-500/10 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/10 font-medium"
+            >
+              {{ tool }}
+            </span>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-700 relative z-10">
+            <div
+              class="flex items-center justify-between text-sm text-gray-400"
+            >
+              <span>Always learning</span>
+              <span>Latest tools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<a
+  *ngIf="function === 'redirect'"
+  [href]="link"
+  class="relative font-bold rounded-xl transition-all transform hover:scale-105 shadow-2xl group whitespace-nowrap text-base sm:text-lg flex justify-center items-center"
+  [ngClass]="getClasses()"
+>
+  <span class="relative z-10 flex justify-center items-center gap-2">
+    {{ text }}
+    <i *ngIf="icon" [class]="icon + ' text-xl'"></i>
+  </span>
+
+  <div
+    *ngIf="color === 'primary'"
+    class="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300"
+  ></div>
+</a>
