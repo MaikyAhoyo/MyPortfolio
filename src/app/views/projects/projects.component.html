@@ -4,13 +4,13 @@
 >
   <div class="absolute inset-0 overflow-hidden opacity-10">
     <div
-      class="absolute top-20 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-float-slow"
+      class="absolute top-20 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"
     ></div>
     <div
-      class="absolute bottom-20 -right-40 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float-medium delay-1500"
+      class="absolute bottom-20 -right-40 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"
     ></div>
     <div
-      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-float-fast delay-3000"
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl"
     ></div>
   </div>
 
@@ -22,7 +22,6 @@
     <div class="text-center mb-20">
       <h2
         class="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-6 text-white"
-        data-animation="fade-in-up"
       >
         My
         <span
@@ -30,148 +29,73 @@
           >Projects</span
         >
       </h2>
-      <p
-        class="text-xl text-gray-400 max-w-3xl mx-auto"
-        data-animation="fade-in-up"
-        data-delay="200"
-      >
-        A collection of my recent work showcasing modern web development with
-        Angular, responsive design, and cutting-edge technologies.
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+        A selection of my most recent and relevant work — focused on clean code,
+        scalability, and seamless user experiences built with modern full-stack
+        technologies.
       </p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-      <div data-animation="fade-in-up" data-delay="300">
-        <app-card
-          [project]="{
-            title: 'E-Commerce Platform',
-            description:
-              'Full-featured online store with payment integration, admin dashboard, and real-time inventory management.',
-            tech: ['Angular', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
-            images: ['/assets/project1-1.jpg', '/assets/project1-2.jpg'],
-            features: [
-              'Payment Processing',
-              'Admin Dashboard',
-              'Real-time Updates',
-              'Responsive Design'
-            ],
-            link: 'https://ecommerce-demo.com',
-            github: 'https://github.com/miguel/ecommerce'
-          }"
-          (selectedProject)="handleSelectedProject($event)"
-        >
-        </app-card>
-      </div>
+      <app-card
+        [project]="{
+          title: 'Chefcitos',
+          description:
+            'A recipe-sharing platform where users can publish, review, and rate recipes. Built with Angular, Express.js, and Supabase.',
+          tech: ['Angular', 'TypeORM', 'Express.js', 'Supabase', 'Node.js'],
+          images: ['/assets/chefcitos-1.jpg', '/assets/chefcitos-2.jpg'],
+          features: [
+            'Recipe Filters & Tags',
+            'User Reviews & Ratings',
+            'Responsive UI',
+            'Modular Architecture'
+          ],
+          link: 'https://chefcitos.vercel.app',
+          github: 'https://github.com/MaikyAhoyo/chefcitos'
+        }"
+        (selectedProject)="handleSelectedProject($event)"
+      >
+      </app-card>
 
-      <div data-animation="fade-in-up" data-delay="400">
-        <app-card
-          [project]="{
-            title: 'Task Management App',
-            description:
-              'Collaborative task management application with real-time updates and drag-and-drop functionality.',
-            tech: ['Angular', 'RxJS', 'Firebase', 'TailwindCSS'],
-            images: ['/assets/project2-1.jpg', '/assets/project2-2.jpg'],
-            features: [
-              'Real-time Collaboration',
-              'Drag & Drop',
-              'Team Workspaces',
-              'Progress Tracking'
-            ],
-            link: 'https://taskmanager-demo.com',
-            github: 'https://github.com/miguel/taskmanager'
-          }"
-          (selectedProject)="handleSelectedProject($event)"
-        >
-        </app-card>
-      </div>
+      <app-card
+        [project]="{
+          title: 'Products Verifier',
+          description:
+            'A multilingual product validation app that verifies products by code and features theme toggling, timing controls, and flag-based UI.',
+          tech: ['Angular', 'TypeScript', 'TailwindCSS', 'i18n'],
+          images: ['/assets/verifier-1.jpg', '/assets/verifier-2.jpg'],
+          features: [
+            'Dark / Light Theme',
+            'Language Switch (EN/ES)',
+            'Product Code Validation',
+            'Custom UI Components'
+          ],
+          link: 'https://products-verifier.vercel.app',
+          github: 'https://github.com/MaikyAhoyo/products-verifier'
+        }"
+        (selectedProject)="handleSelectedProject($event)"
+      >
+      </app-card>
 
-      <div data-animation="fade-in-up" data-delay="500">
-        <app-card
-          [project]="{
-            title: 'Weather Dashboard',
-            description:
-              'Beautiful weather application with location-based forecasts and interactive maps.',
-            tech: ['Angular', 'Weather API', 'Chart.js', 'PWA'],
-            images: ['/assets/project3-1.jpg', '/assets/project3-2.jpg'],
-            features: [
-              'Location-based Forecasts',
-              'Interactive Maps',
-              '7-day Predictions',
-              'PWA Support'
-            ],
-            link: 'https://weather-demo.com',
-            github: 'https://github.com/miguel/weather-app'
-          }"
-          (selectedProject)="handleSelectedProject($event)"
-        >
-        </app-card>
-      </div>
-
-      <div data-animation="fade-in-up" data-delay="600">
-        <app-card
-          [project]="{
-            title: 'Social Media Platform',
-            description:
-              'Modern social platform with real-time messaging, post sharing, and community features.',
-            tech: ['Angular', 'Socket.io', 'Express', 'MongoDB'],
-            images: ['/assets/project4-1.jpg', '/assets/project4-2.jpg'],
-            features: [
-              'Real-time Messaging',
-              'Image/Video Sharing',
-              'Like System',
-              'User Profiles'
-            ],
-            link: 'https://social-demo.com',
-            github: 'https://github.com/miguel/social-app'
-          }"
-          (selectedProject)="handleSelectedProject($event)"
-        >
-        </app-card>
-      </div>
-
-      <div data-animation="fade-in-up" data-delay="700">
-        <app-card
-          [project]="{
-            title: 'Fitness Tracking App',
-            description:
-              'Comprehensive fitness application with workout planning and progress tracking.',
-            tech: ['Angular', 'Ionic', 'Firebase', 'Chart.js'],
-            images: ['/assets/project5-1.jpg', '/assets/project5-2.jpg'],
-            features: [
-              'Workout Planning',
-              'Progress Charts',
-              'Social Challenges',
-              'Nutrition Tracking'
-            ],
-            link: 'https://fitness-demo.com',
-            github: 'https://github.com/miguel/fitness-app'
-          }"
-          (selectedProject)="handleSelectedProject($event)"
-        >
-        </app-card>
-      </div>
-
-      <div data-animation="fade-in-up" data-delay="800">
-        <app-card
-          [project]="{
-            title: 'Learning Management System',
-            description:
-              'Educational platform with course management, video streaming, and student tracking.',
-            tech: ['Angular', 'NestJS', 'PostgreSQL', 'AWS S3'],
-            images: ['/assets/project6-1.jpg', '/assets/project6-2.jpg'],
-            features: [
-              'Course Management',
-              'Video Streaming',
-              'Student Assessments',
-              'Certificate Generation'
-            ],
-            link: 'https://lms-demo.com',
-            github: 'https://github.com/miguel/lms-platform'
-          }"
-          (selectedProject)="handleSelectedProject($event)"
-        >
-        </app-card>
-      </div>
+      <app-card
+        [project]="{
+          title: 'Django Recipes API',
+          description:
+            'Backend REST API developed with Django and Django REST Framework to manage recipes, users, and reviews with full CRUD support.',
+          tech: ['Django', 'DRF', 'PostgreSQL', 'JWT Auth'],
+          images: ['/assets/djangoapi-1.jpg', '/assets/djangoapi-2.jpg'],
+          features: [
+            'RESTful Endpoints',
+            'Token Authentication',
+            'Database Validation',
+            'Admin Panel Integration'
+          ],
+          link: 'https://github.com/MaikyAhoyo/django-recipes-api',
+          github: 'https://github.com/MaikyAhoyo/django-recipes-api'
+        }"
+        (selectedProject)="handleSelectedProject($event)"
+      >
+      </app-card>
     </div>
   </div>
 
